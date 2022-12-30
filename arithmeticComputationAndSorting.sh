@@ -35,6 +35,10 @@ do
 done
 echo "${array[@]}"
 
-echo "Sorting computation result in Descending"
+echo "Sorting computation result in Descending order"
 sortedDescending=($(echo ${array[@]}| tr " " "\n" | sort -nr))
 echo ${sortedDescending[@]}
+
+echo "Sorting the result in Ascending order"
+sortedAscending=($(echo ${array[@]}| tr " " "\n" | sort -n))
+echo ${sortedAscending[@]}
