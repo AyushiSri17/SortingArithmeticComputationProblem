@@ -6,5 +6,5 @@ read b
 echo "Enter third numbers: "
 read c
 
-com=$(echo $(( a * b + c )))
+com=$(echo $(( c + a / b )))
 echo "Computation result is: "$com
