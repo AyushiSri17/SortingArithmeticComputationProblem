@@ -21,9 +21,16 @@ echo "Computation 3 result is: "$com3
 com4=$(echo $(( a % b + c )))
 echo "Computation 4 result is: "$com4
 
+#Storing result in dictionary
 arithmaticOperation[result1]=$com1
 arithmaticOperation[result2]=$com2
 arithmaticOperation[result3]=$com3
 arithmaticOperation[result4]=$com4
+echo ${arithmaticOperation[*]}
 
-echo ${arithmaticOperation[@]}
+#Storing dictionary result in array
+for((i=0; i<=${#arithmaticOperation[@]}; i++))
+do
+  array[i]=${arithmaticOperation[result$((i+1))]}
+done
+echo "${array[@]}"
