@@ -34,3 +34,7 @@ do
   array[i]=${arithmaticOperation[result$((i+1))]}
 done
 echo "${array[@]}"
+
+echo "Sorting computation result in Descending"
+sortedDescending=($(echo ${array[@]}| tr " " "\n" | sort -nr))
+echo ${sortedDescending[@]}
